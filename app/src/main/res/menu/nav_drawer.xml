@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <item
+
+            android:icon="@drawable/user"
+            android:id="@+id/profile"
+            android:title="Profile"
+            android:iconTint="@color/black"
+            />
+
+    <item
+        android:icon="@drawable/faculty"
+        android:id="@+id/faculty"
+        android:title="Faculty"
+        android:iconTint="@color/black"
+
+        />
+        <item
+
+            android:icon="@drawable/book"
+            android:id="@+id/ebook"
+            android:title="Ebooks"
+            android:iconTint="@color/black"
+            />
+        <item
+
+            android:icon="@drawable/youtube"
+            android:id="@+id/videoLecture"
+            android:title="Video Lecture"
+            android:iconTint="@color/black"
+            />
+
+        <item
+
+            android:icon="@drawable/globe"
+            android:id="@+id/website"
+            android:title="Website"
+            android:iconTint="@color/black"
+            />
+
+
+
+<group
+    android:id="@+id/bottom_menu">
+    <item
+
+        android:icon="@drawable/about"
+        android:id="@+id/about"
+        android:title="About"
+        android:iconTint="@color/black"
+        />
+    <item
+
+        android:icon="@drawable/share"
+        android:id="@+id/share"
+        android:title="Share"
+        android:iconTint="@color/black"
+        />
+</group>
+
+
+</menu>

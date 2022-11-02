@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.GalleryFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/Republicday"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="8dp"
+
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Republic Day"
+                android:textStyle="bold"
+
+                android:layout_marginTop="12dp"
+
+                android:textSize="21sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+
+                android:gravity="center"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_font"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="2dp"
+                android:paddingHorizontal="2dp"
+                android:layout_width="match_parent"
+                tools:listitem="@layout/gallery_image"
+                android:layout_height="wrap_content"
+                android:id="@+id/republicRecycler"/>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/IndependenceDay"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="8dp"
+
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Independence Day"
+                android:textStyle="bold"
+
+                android:layout_marginTop="12dp"
+
+                android:textSize="21sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+
+                android:gravity="center"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_font"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="2dp"
+                android:paddingHorizontal="2dp"
+                android:layout_width="match_parent"
+                tools:listitem="@layout/gallery_image"
+                android:layout_height="wrap_content"
+                android:id="@+id/independenceRecycler"/>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/Convocation"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="8dp"
+
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Convocation"
+                android:textStyle="bold"
+
+                android:layout_marginTop="12dp"
+
+                android:textSize="21sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+
+                android:gravity="center"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_font"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="2dp"
+                android:paddingHorizontal="2dp"
+                tools:listitem="@layout/gallery_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ConvoRecycler"/>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/GandhiJayanti"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="8dp"
+
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gandhi Jayanti"
+                android:textStyle="bold"
+
+                android:layout_marginTop="12dp"
+
+                android:textSize="21sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+
+                android:gravity="center"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_font"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="2dp"
+                android:paddingHorizontal="2dp"
+                tools:listitem="@layout/gallery_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/GandhiRecycler"/>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/Urjostsav"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="8dp"
+
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Urjosatav"
+
+                android:textStyle="bold"
+
+                android:layout_marginTop="12dp"
+
+                android:textSize="21sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+
+                android:gravity="center"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_font"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="2dp"
+                tools:listitem="@layout/gallery_image"
+                android:paddingHorizontal="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/UrjosatavRecycler"/>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/Others"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_marginVertical="8dp"
+
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Others"
+                android:textStyle="bold"
+
+                android:layout_marginTop="12dp"
+
+                android:textSize="21sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+
+                android:gravity="center"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_font"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="2dp"
+                android:paddingHorizontal="2dp"
+                tools:listitem="@layout/gallery_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/otherRecycler"/>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

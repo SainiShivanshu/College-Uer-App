@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/image_slider"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            app:iss_auto_cycle="true"
+            app:iss_delay="0"
+            app:iss_period="1000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/college_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RGIPT TIMES"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_slider"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/about_college"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_college"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/college_name"
+            android:layout_marginTop="4dp"/>
+
+<LinearLayout
+    android:id="@+id/department"
+    android:layout_marginTop="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#313131"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:padding="10dp"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/about_college"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Department"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+
+        android:gravity="center"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/CheDept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="12dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chemical Engineering"
+                android:textStyle="normal"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/CompDept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="12dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Computer Science &amp; Engineering"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/ElecDept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="12dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Electronics Engineering"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/MathDept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="12dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mathematical Science"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"/>
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/MangDept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="12dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Management Studies"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"/>
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/PetDept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="12dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Petroleum Engineering &amp; Geoengineering"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"/>
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/ScienceDept"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="12dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Science and Humanities"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"/>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
+        <LinearLayout
+            android:id="@+id/contact"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="10dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/department"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Details"
+                android:textStyle="bold"
+                android:layout_marginTop="12dp"
+
+                android:textSize="21sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+
+                android:gravity="center"/>
+
+
+                <TextView android:layout_marginHorizontal="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rajiv Gandhi Institute of Petroleum Technology,Mubarakhpur Mukhetia More, Bahadurpur, Jais,Post Harbanshganj, Amethi - 229304, Uttar Pradesh"
+                    android:textStyle="normal"
+                    android:textSize="18sp"
+                    />
+
+
+
+            <ImageView
+                android:id="@+id/map"
+                android:layout_width="wrap_content"
+                android:layout_height="230dp"
+                android:src="@drawable/rgipt_contact"
+                android:clickable="true"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

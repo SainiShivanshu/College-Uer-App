@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">College User App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+    <string name="about_college">The Ministry of Petroleum and Natural Gas (MoPNG), Government of India, set up the Rajiv Gandhi Institute of Petroleum Technology at Jais, Amethi, Uttar Pradesh, by the Act of the Parliament. The Institute has been accorded the eminence of being an Institution of National Importance along the lines of the Indian Institutes of Technology (IITs). The Institute is empowered to award degrees in its own right. The Institute is co-promoted as an energy domain specific institute by six leading oil public sector units (Oil and Natural Gas Corporation Limited, Indian Oil Corporation Limited, Oil India Limited, Gail (India) Limited, Bharat Petroleum Corporation Limited and Hindustan Petroleum Corporation Limited) in association with the Oil Industry Development Board. The Institute is associating with leading International Universities/Institutions specializing in the domain of Petroleum Technology and Energy.</string>
+</resources>
