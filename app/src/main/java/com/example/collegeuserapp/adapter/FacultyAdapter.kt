@@ -31,6 +31,7 @@ class FacultyAdapter(val context:Context,val list:ArrayList<AddFacultyModel>)
         holder.binding.facultyName.text=list[position].name
         holder.binding.facultyPost.text=list[position].post
         holder.binding.facultyEmail.text=list[position].email
+        holder.binding.facultyMobileNo.text=list[position].mobileNo
         Glide.with(context).load(list[position].image).into(holder.binding.facultyImage)
 
         holder.binding.facultyEmail.setOnClickListener {
@@ -38,6 +39,15 @@ class FacultyAdapter(val context:Context,val list:ArrayList<AddFacultyModel>)
                 data = Uri.parse("mailto:") // only email apps should handle this
                 putExtra(Intent.EXTRA_EMAIL, list[position].email)
 
+            }
+            if (intent.resolveActivity(context.packageManager) != null) {
+                context.startActivity(intent)
+            }
+        }
+
+        holder.binding.facultyMobileNo.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL).apply {
+                data = Uri.parse("tel:+91"+list[position].mobileNo.toString())
             }
             if (intent.resolveActivity(context.packageManager) != null) {
                 context.startActivity(intent)

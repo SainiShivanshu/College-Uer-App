@@ -4,14 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
-import androidx.recyclerview.widget.GridLayoutManager
 import com.example.collegeuserapp.adapter.EbookAdapter
-import com.example.collegeuserapp.adapter.FacultyAdapter
-import com.example.collegeuserapp.adapter.GalleryImageAdapter
 import com.example.collegeuserapp.databinding.ActivityEbookBinding
 import com.example.collegeuserapp.model.AddEbookModel
-import com.example.collegeuserapp.model.UploadImageModel
 import com.google.android.gms.tasks.OnFailureListener
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore

@@ -104,6 +104,10 @@ class SetUpProfileActivity : AppCompatActivity() {
                 binding.userNumber.requestFocus()
                 binding.userNumber.error="Empty"
             }
+            else if(binding.rollNo.text!!.isEmpty()){
+                binding.rollNo.requestFocus()
+                binding.rollNo.error="Empty"
+            }
             else if(binding.address.text!!.isEmpty()){
                 binding.address.requestFocus()
                 binding.address.error="Empty"
@@ -159,6 +163,7 @@ class SetUpProfileActivity : AppCompatActivity() {
         map["address"]=binding.address.text.toString()
         map["programme"]=programme
         map["branch"]=branch
+        map["rollNo"]=binding.rollNo.text.toString()
 
         Firebase.firestore.collection("Users")
             .document(binding.emailId.text.toString())

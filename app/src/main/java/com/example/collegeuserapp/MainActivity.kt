@@ -112,7 +112,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 binding.drawerLayout.close()
             }
             R.id.videoLecture -> {
-                Toast.makeText(this, "video", Toast.LENGTH_SHORT).show()
+
+            }
+            R.id.gatepass->{
+                startActivity(Intent(this,GatePassActivity::class.java))
+                binding.drawerLayout.close()
+            }
+            R.id.complain->{
+                startActivity(Intent(this,ComplainActivity::class.java))
+                binding.drawerLayout.close()
             }
             R.id.website -> {
                 Toast.makeText(this, "website", Toast.LENGTH_SHORT).show()

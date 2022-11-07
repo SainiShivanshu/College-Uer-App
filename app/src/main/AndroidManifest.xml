@@ -4,6 +4,7 @@
     package="com.example.collegeuserapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -16,11 +17,26 @@
         android:theme="@style/Theme.CollegeUserApp"
         tools:targetApi="31">
         <activity
+            android:name=".AddGatePassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ComplainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.OutOfStationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LocalGatePassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.GatePassActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".activity.SetUpProfileActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".activity.ForgotPasswordActivity"
             android:exported="false" />
@@ -29,7 +45,7 @@
             android:exported="false" />
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".activity.PdfViewerActivity"
             android:exported="false" />

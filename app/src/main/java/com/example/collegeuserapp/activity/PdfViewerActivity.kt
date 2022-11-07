@@ -27,7 +27,6 @@ class PdfViewerActivity : AppCompatActivity() {
 binding.pdfView.loadUrl("https://docs.google.com/gview?embedded=true&url="+url!!)
         binding.pdfView.settings.javaScriptEnabled=true
         binding.pdfView.settings.setSupportZoom(true)
-
     }
 
     override fun onSupportNavigateUp(): Boolean {

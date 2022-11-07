@@ -1,180 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.ProfileActivity">
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="15dp"
-        android:orientation="vertical"
-        android:padding="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:src="@drawable/avatar"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/userImage"
-            android:layout_marginBottom="12dp"
-            />
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:hint="Name"
-            app:shapeAppearance="@style/Rounded">
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/userName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/avatar"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/userImage"
+                android:layout_marginBottom="12dp"
                 />
 
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginTop="5dp"
-
-            android:hint="Phone Number"
-            app:shapeAppearance="@style/Rounded">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/userNumber"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:hint="Name"
+                app:shapeAppearance="@style/Rounded">
 
-                android:inputType="number" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginTop="5dp"
-            android:hint="Email Id"
-
-            app:shapeAppearance="@style/Rounded">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/emailId"
-                android:layout_width="match_parent"
-                android:enabled="false"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginTop="5dp"
-            android:spinnerMode="dropdown"
-            android:id="@+id/Programme"
-            />
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginTop="5dp"
-            android:spinnerMode="dropdown"
-            android:id="@+id/Branch"
-            />
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginTop="5dp"
-            android:hint="Address"
-            app:shapeAppearance="@style/Rounded">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/address"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="5dp"
 
+                android:hint="Phone Number"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/userNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="5dp"
+                android:hint="Email Id"
+
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailId"
+                    android:layout_width="match_parent"
+                    android:enabled="false"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="5dp"
+                android:hint="Roll No"
+
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/rollNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="5dp"
+                android:spinnerMode="dropdown"
+                android:id="@+id/Programme"
+                />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="5dp"
+                android:spinnerMode="dropdown"
+                android:id="@+id/Branch"
                 />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="5dp"
+                android:hint="Address"
+                app:shapeAppearance="@style/Rounded">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
 
-        <!--        <com.google.android.material.card.MaterialCardView-->
+            <!--        <com.google.android.material.card.MaterialCardView-->
 
 
-        <!--            android:layout_width="match_parent"-->
-        <!--              android:layout_marginTop="12dp"-->
-        <!--            app:cardElevation="3dp"-->
-        <!--            android:layout_marginHorizontal="5dp"-->
-        <!--            android:layout_gravity="center_horizontal"-->
-        <!--            -->
-        <!--            android:layout_height="wrap_content">-->
+            <!--            android:layout_width="match_parent"-->
+            <!--              android:layout_marginTop="12dp"-->
+            <!--            app:cardElevation="3dp"-->
+            <!--            android:layout_marginHorizontal="5dp"-->
+            <!--            android:layout_gravity="center_horizontal"-->
+            <!--            -->
+            <!--            android:layout_height="wrap_content">-->
 
-        <!--            <LinearLayout-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:layout_margin="7dp"-->
-        <!--                android:layout_gravity="center"-->
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_margin="7dp"-->
+            <!--                android:layout_gravity="center"-->
 
-        <!--                android:orientation="horizontal">-->
+            <!--                android:orientation="horizontal">-->
 
-        <!--                <ImageView-->
+            <!--                <ImageView-->
 
-        <!--                    android:layout_width="wrap_content"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:src="@drawable/ic_pdf"/>-->
-        <!--                <TextView-->
-        <!--                    android:id="@+id/ebookTitle"-->
-        <!--                    android:layout_gravity="top"-->
-        <!--                    android:gravity="top"-->
-        <!--                    android:layout_width="match_parent"-->
-        <!--                    android:layout_height="wrap_content"-->
-        <!--                    android:layout_marginLeft="7dp"-->
-        <!--                    android:text="No file selected"-->
-        <!--                    android:textSize="19sp"/>-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:src="@drawable/ic_pdf"/>-->
+            <!--                <TextView-->
+            <!--                    android:id="@+id/ebookTitle"-->
+            <!--                    android:layout_gravity="top"-->
+            <!--                    android:gravity="top"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginLeft="7dp"-->
+            <!--                    android:text="No file selected"-->
+            <!--                    android:textSize="19sp"/>-->
 
-        <!--                <ImageView-->
-        <!--                    android:clickable="true"-->
-        <!--                    android:id="@+id/uploadResume"-->
-        <!--                    android:layout_width="24dp"-->
-        <!--                    android:layout_height="24dp"-->
-        <!--                    android:src="@drawable/upload"-->
-        <!--                    android:layout_marginLeft="-30dp"/>-->
-
-
-
-        <!--            </LinearLayout>-->
-        <!--        </com.google.android.material.card.MaterialCardView>-->
+            <!--                <ImageView-->
+            <!--                    android:clickable="true"-->
+            <!--                    android:id="@+id/uploadResume"-->
+            <!--                    android:layout_width="24dp"-->
+            <!--                    android:layout_height="24dp"-->
+            <!--                    android:src="@drawable/upload"-->
+            <!--                    android:layout_marginLeft="-30dp"/>-->
 
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/proceed"
-            style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginTop="24dp"
-            android:text="Update Profile"
-android:textAllCaps="false"
-            android:textSize="18sp"
-            app:shapeAppearance="@style/Rounded" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--            </LinearLayout>-->
+            <!--        </com.google.android.material.card.MaterialCardView>-->
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/proceed"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="24dp"
+                android:text="Update Profile"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                app:shapeAppearance="@style/Rounded" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView >

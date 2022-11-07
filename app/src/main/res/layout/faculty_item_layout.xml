@@ -51,12 +51,21 @@
                     android:clickable="true"
                     android:text="Email"
                     android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/facultyMobileNo"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingLeft="12dp"
+                    android:text="Mobile No"
+                    android:textSize="18sp"/>
             </LinearLayout>
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/facultyImage"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:src="@drawable/profile"
                 android:layout_gravity="center"
                 android:layout_weight="0.5"/>

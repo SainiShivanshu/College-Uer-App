@@ -9,5 +9,6 @@ data class UserModel(
     val resumeUrl:String?="",
     val address:String?="",
     val programme:String?="",
-    val branch:String?=""
+    val branch:String?="",
+    val rollNo:String?=""
 )

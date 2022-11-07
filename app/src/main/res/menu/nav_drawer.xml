@@ -18,7 +18,6 @@
 
         />
         <item
-
             android:icon="@drawable/book"
             android:id="@+id/ebook"
             android:title="Ebooks"
@@ -31,7 +30,21 @@
             android:title="Video Lecture"
             android:iconTint="@color/black"
             />
+    <item
 
+        android:icon="@drawable/gate_pass"
+        android:id="@+id/gatepass"
+        android:title="Gate Pass"
+        android:iconTint="@color/black"
+        />
+
+    <item
+
+        android:icon="@drawable/complain"
+        android:id="@+id/complain"
+        android:title="Complain"
+        android:iconTint="@color/black"
+        />
         <item
 
             android:icon="@drawable/globe"

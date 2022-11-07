@@ -55,6 +55,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         app:layout_constraintStart_toStartOf="parent"
+        app:passwordToggleDrawable="@drawable/show_password_selector"
+        app:passwordToggleEnabled="true"
         android:hint="Password"
         app:shapeAppearance="@style/Rounded"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
@@ -62,6 +64,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+android:inputType="textPassword"
 
             android:id="@+id/password"
             />

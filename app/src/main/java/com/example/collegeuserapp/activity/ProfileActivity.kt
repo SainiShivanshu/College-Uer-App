@@ -108,10 +108,15 @@ class ProfileActivity : AppCompatActivity() {
                 binding.userNumber.requestFocus()
                 binding.userNumber.error="Empty"
             }
+            else if(binding.rollNo.text!!.isEmpty()){
+                binding.rollNo.requestFocus()
+                binding.rollNo.error="Empty"
+            }
             else if(binding.address.text!!.isEmpty()){
                 binding.address.requestFocus()
                 binding.address.error="Empty"
             }
+
             else if(branch=="Select Department" || branch==null){
                 Toast.makeText(this,"Select Department", Toast.LENGTH_SHORT).show()
             }
@@ -136,13 +141,14 @@ class ProfileActivity : AppCompatActivity() {
         map["address"]=binding.address.text.toString()
         map["programme"]=programme
         map["branch"]=branch
+        map["rollNo"]=binding.rollNo.text.toString()
 
         Firebase.firestore.collection("Users")
             .document(binding.emailId.text.toString())
             .update(map).addOnSuccessListener {
                 Toast.makeText(this,"Profile Updated!!",Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
+
+
             }
             .addOnFailureListener {
                 Toast.makeText(this,"Something Went Wrong",Toast.LENGTH_SHORT).show()
@@ -157,13 +163,14 @@ class ProfileActivity : AppCompatActivity() {
         map["address"]=binding.address.text.toString()
         map["programme"]=programme
         map["branch"]=branch
+        map["rollNo"]=binding.rollNo.text.toString()
 
         Firebase.firestore.collection("Users")
             .document(binding.emailId.text.toString())
             .update(map).addOnSuccessListener {
                 Toast.makeText(this,"Profile Updated!!",Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
+
+
             }
             .addOnFailureListener {
                 Toast.makeText(this,"Something Went Wrong",Toast.LENGTH_SHORT).show()
@@ -196,6 +203,7 @@ class ProfileActivity : AppCompatActivity() {
                 binding.userName.setText(it.getString("name"))
                 binding.userNumber.setText(it.getString("mobileNo"))
                 binding.address.setText(it.getString("address"))
+                binding.rollNo.setText(it.getString("rollNo"))
                 Glide.with(this).load(it.getString("imageUrl")).into(binding.userImage)
 
                 var i=0

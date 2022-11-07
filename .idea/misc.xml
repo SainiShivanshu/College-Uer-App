@@ -5,18 +5,25 @@
       <map>
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/drawable-v24/ic_login.xml" value="0.1" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/drawable-v24/ic_register.xml" value="0.1" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/drawable/ic_baseline_visibility_off_24.xml" value="0.1" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_add_gate_pass.xml" value="0.25" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_complain.xml" value="0.2359375" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_ebook.xml" value="0.25" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_faculty.xml" value="0.25" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.25" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_full_image.xml" value="0.1" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_gate_pass.xml" value="0.25" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_local_gate_pass.xml" value="0.25" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_main.xml" value="0.136" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_notice.xml" value="0.2056159420289855" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_out_of_station.xml" value="0.264" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_pdf_viewer.xml" value="0.136" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_profile.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_set_up_profile.xml" value="0.22056159420289856" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/activity_sign_up.xml" value="0.19747899159663865" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/faculty_item_layout.xml" value="0.25" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/fragment_faculty.xml" value="0.1" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/fragment_gallery.xml" value="0.1" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/fragment_notice.xml" value="0.264" />
@@ -28,8 +35,9 @@
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/notice_list.xml" value="0.25" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/pdf_list.xml" value="0.25" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/shimmer_for_ebook.xml" value="0.16" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/layout/show_password_selector.xml" value="0.2441123188405797" />
         <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/menu/bottom_nav.xml" value="0.1" />
-        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/menu/nav_drawer.xml" value="0.2" />
+        <entry key="..\:/Users/shivanshu/AndroidStudioProjects/CollegeUserApp/app/src/main/res/menu/nav_drawer.xml" value="0.264" />
       </map>
     </option>
   </component>

@@ -52,7 +52,7 @@ private lateinit var binding: FragmentHomeBinding
                 for(doc in it){
                     val data = doc.toObject(UploadImageModel::class.java)
                     for(i in data.image){
-                        slideList.add(SlideModel(i, ScaleTypes.CENTER_INSIDE))
+                        slideList.add(SlideModel(i,"RGIPT", ScaleTypes.CENTER_INSIDE))
                     }
                 }
                 binding.imageSlider.setImageList(slideList)
