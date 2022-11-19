@@ -28,7 +28,7 @@ class GalleryFragment : Fragment() {
     ): View? {
         binding=FragmentGalleryBinding.inflate(layoutInflater)
 
-        (activity as AppCompatActivity).supportActionBar?.title="Gallery"
+//        (activity as AppCompatActivity).supportActionBar?.title="Gallery"
 
         getRepublic()
         getIndependence()

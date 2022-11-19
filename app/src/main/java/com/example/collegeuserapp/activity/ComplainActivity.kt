@@ -1,8 +1,11 @@
 package com.example.collegeuserapp.activity
 
 import android.R
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -159,6 +162,8 @@ class ComplainActivity : AppCompatActivity() {
                 binding.Branch.setSelection(0)
                 binding.Programme.setSelection(0)
                 binding.Category.setSelection(0)
+
+
             }
             .addOnFailureListener {
                 Toast.makeText(this,"Something Went Wrong",Toast.LENGTH_SHORT).show()
@@ -169,5 +174,22 @@ class ComplainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        menuInflater.inflate(com.example.collegeuserapp.R.menu.previous_complain,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            com.example.collegeuserapp.R.id.previousComplain-> {
+                var intent = Intent(this, ComplainListActivity::class.java)
+                startActivity(intent)
+            }
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

@@ -3,12 +3,14 @@ package com.example.collegeuserapp.activity
 import android.R
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import com.example.collegeuserapp.databinding.ActivityOutOfStationBinding
-import com.example.collegeuserapp.model.LocalGatePass
 import com.example.collegeuserapp.model.OutOfStation
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.ktx.firestore
@@ -216,5 +218,22 @@ Toast.makeText(this,"Something Went Wrong",Toast.LENGTH_SHORT).show()
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        menuInflater.inflate(com.example.collegeuserapp.R.menu.local_gate_pass_menu,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            com.example.collegeuserapp.R.id.LocalGatePassList-> {
+                var intent = Intent(this, OutOfStationListActivity::class.java)
+                startActivity(intent)
+            }
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

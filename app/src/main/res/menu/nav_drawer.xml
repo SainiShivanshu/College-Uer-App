@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
         <item
@@ -7,7 +8,7 @@
             android:icon="@drawable/user"
             android:id="@+id/profile"
             android:title="Profile"
-            android:iconTint="@color/black"
+
             />
 
     <item
@@ -25,7 +26,7 @@
             />
         <item
 
-            android:icon="@drawable/youtube"
+            android:icon="@drawable/video"
             android:id="@+id/videoLecture"
             android:title="Video Lecture"
             android:iconTint="@color/black"
@@ -47,7 +48,7 @@
         />
         <item
 
-            android:icon="@drawable/globe"
+            android:icon="@drawable/web"
             android:id="@+id/website"
             android:title="Website"
             android:iconTint="@color/black"

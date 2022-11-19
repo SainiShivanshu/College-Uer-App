@@ -21,7 +21,7 @@ class NoticeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding=FragmentNoticeBinding.inflate(layoutInflater)
-        (activity as AppCompatActivity).supportActionBar?.title="Notices"
+//        (activity as AppCompatActivity).supportActionBar?.title="Notices"
         val notice = ArrayList<AddNoticeModel>()
 
 

@@ -168,8 +168,11 @@ class ProfileActivity : AppCompatActivity() {
         Firebase.firestore.collection("Users")
             .document(binding.emailId.text.toString())
             .update(map).addOnSuccessListener {
+                dialog.dismiss()
                 Toast.makeText(this,"Profile Updated!!",Toast.LENGTH_SHORT).show()
-
+                val editor = preferences.edit()
+                editor.putString("rollNo", binding.rollNo.text.toString())
+                editor.apply()
 
             }
             .addOnFailureListener {

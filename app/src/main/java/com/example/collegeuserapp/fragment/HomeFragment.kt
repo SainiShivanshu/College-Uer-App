@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.collegeuserapp.MainActivity
 import com.example.collegeuserapp.databinding.FragmentHomeBinding
 import com.example.collegeuserapp.model.UploadImageModel
 import com.google.android.gms.tasks.OnFailureListener
@@ -28,6 +29,7 @@ private lateinit var binding: FragmentHomeBinding
     ): View? {
        binding=FragmentHomeBinding.inflate(layoutInflater)
         (activity as AppCompatActivity).supportActionBar?.title="Home"
+//        (activity as MainActivity).supportActionBar?.title = "Home"
         getSliderImage()
 
         binding.map.setOnClickListener {

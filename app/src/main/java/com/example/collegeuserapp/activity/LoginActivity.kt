@@ -23,7 +23,12 @@ class LoginActivity : AppCompatActivity() {
 
         binding.button4.setOnClickListener {
             startActivity(Intent(this,SignUpActivity::class.java))
-            finish()
+
+        }
+
+        binding.ForgotPassword.setOnClickListener {
+            startActivity(Intent(this,ForgotPasswordActivity::class.java))
+
         }
 
         binding.button3.setOnClickListener {
@@ -39,6 +44,7 @@ class LoginActivity : AppCompatActivity() {
                 validatePassword()
             }
         }
+
     }
 
     private fun validatePassword() {

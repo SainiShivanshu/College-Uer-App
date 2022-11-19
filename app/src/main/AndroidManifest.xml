@@ -17,47 +17,73 @@
         android:theme="@style/Theme.CollegeUserApp"
         tools:targetApi="31">
         <activity
-            android:name=".AddGatePassActivity"
+            android:name=".activity.AboutActivity"
+            android:theme="@style/Theme.CollegeUserApp2"
             android:exported="false" />
+        <activity
+            android:name=".activity.ComplainListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
+        <activity
+            android:name=".activity.OutOfStationListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
+        <activity
+            android:name=".activity.LocalGatePassListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
         <activity
             android:name=".activity.ComplainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
         <activity
             android:name=".activity.OutOfStationActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
         <activity
             android:name=".activity.LocalGatePassActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
         <activity
             android:name=".activity.GatePassActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
         <activity
             android:name=".activity.ProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
         <activity
             android:name=".activity.SetUpProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
         <activity
             android:name=".activity.ForgotPasswordActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
         <activity
             android:name=".activity.SignUpActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
         <activity
             android:name=".activity.PdfViewerActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
         <activity
             android:name=".activity.EbookActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
         <activity
             android:name=".activity.FacultyActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CollegeUserApp2" />
         <activity
             android:name=".activity.FullImageActivity"
-            android:exported="false" />
+            android:exported="false"
+    />
         <activity
             android:name=".MainActivity"
             android:exported="true">

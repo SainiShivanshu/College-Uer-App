@@ -14,15 +14,15 @@ class FullImageActivity : AppCompatActivity() {
         binding=ActivityFullImageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         val image = intent.getStringExtra("image")
         Glide.with(this).load(image).into(binding.fullImage)
+
+
+        binding.backButton.setOnClickListener {
+            finish()
+        }
     }
-    override fun onSupportNavigateUp(): Boolean {
-        finish()
-        return true
-    }
+
 }
 
 

@@ -1,19 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@drawable/toolbar_background">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/rgipt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/navUserName"
+                android:text="NAME"
+                android:textSize="20sp"
+                android:textStyle="bold|normal"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/navUser_emailId"
+                android:text="email"
+                android:textSize="10sp"
+                android:textStyle="normal"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="SmallSp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/navUserImage"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar"
+
+            app:strokeWidth="2dp"
+            android:padding="6dp"
+            app:strokeColor="@android:color/darker_gray"
+            android:layout_width="65dp"
+            android:layout_height="65dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

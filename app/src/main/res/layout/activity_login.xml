@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     tools:context=".activity.LoginActivity">
 
@@ -13,13 +14,12 @@
         android:id="@+id/imageView6"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="21dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_login" />
-
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -70,7 +70,17 @@ android:inputType="textPassword"
             />
     </com.google.android.material.textfield.TextInputLayout>
 
-
+    <TextView
+        android:id="@+id/ForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:text="Forgot Password?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.134"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button3"
@@ -85,7 +95,7 @@ android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/ForgotPassword" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button4"
@@ -103,6 +113,7 @@ android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </androidx.core.widget.NestedScrollView>
