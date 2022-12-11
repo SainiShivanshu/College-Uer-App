@@ -47,6 +47,7 @@ class OutOfStationAdapter (val context: Context, val list:ArrayList<OutOfStation
             binding.date.text = list[position].date
             binding.TimeOut.text = list[position].timeOut
             binding.place.text = list[position].place
+            binding.email.text=list[position].emailId
             binding.overnightStay.text = list[position].overNightStayInformation
             binding.status.text = list[position].status
             binding.TimeIn.text = list[position].timeIn

@@ -26,7 +26,7 @@ supportActionBar?.title="Previous Complain"
         var list = ArrayList<Complain>()
 
         Firebase.firestore.collection("Complain")
-            .whereEqualTo("rollNo",preferences.getString("rollNo",""))
+            .whereEqualTo("emailId",preferences.getString("email",""))
             .orderBy("timestamp", Query.Direction.DESCENDING)
             .get().addOnSuccessListener {
                 list.clear()
@@ -34,10 +34,12 @@ supportActionBar?.title="Previous Complain"
                     val data = doc.toObject(Complain::class.java)
                     list.add(data)
                 }
-                binding.complainRecycler.adapter= ComplainAdapter(this,list)
+
+                binding.complainRecycler.adapter=ComplainAdapter(this,list)
+
             }
             .addOnFailureListener {
-                Toast.makeText(this,"Something went wrong", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,it.message.toString(), Toast.LENGTH_SHORT).show()
             }
 
     }

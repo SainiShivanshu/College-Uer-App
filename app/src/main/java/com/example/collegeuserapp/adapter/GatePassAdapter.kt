@@ -52,6 +52,7 @@ import com.example.collegeuserapp.model.LocalGatePass
              binding.programme.text = list[position].programme
              binding.date.text = list[position].date
              binding.TimeOut.text = list[position].timeOut
+             binding.email.text=list[position].emailId
              binding.place.text = list[position].place
              binding.status.text = list[position].status
              binding.TimeIn.text = list[position].timeIn

@@ -6,15 +6,22 @@ import android.app.TimePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import com.example.collegeuserapp.databinding.ActivityLocalGatePassBinding
+import com.example.collegeuserapp.model.AdminModel
 import com.example.collegeuserapp.model.LocalGatePass
+import com.example.collegeuserapp.notification.NotificationData
+import com.example.collegeuserapp.notification.PushNotification
+import com.example.collegeuserapp.notification.api.ApiUtilities
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import retrofit2.Call
+import retrofit2.Callback
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -34,7 +41,6 @@ TimePickerDialog.OnTimeSetListener{
     private lateinit var programme:String
 private  var date:String?=null
 private  var TimeOut:String?=null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -147,32 +153,69 @@ name = binding.name.text.toString(),
         timestamp= FieldValue.serverTimestamp(),
          roomNo = binding.RoomNo.text.toString(),
          date = date,
-         timeOut = TimeOut
+         timeOut = TimeOut,
+         emailId = binding.emailId.text.toString()
         )
 
 
         Firebase.firestore.collection("Local Gate Pass")
             .document(key).set(data).addOnSuccessListener {
 
-                Toast.makeText(this,"Applied for gate pass", Toast.LENGTH_SHORT).show()
-                binding.name.text=null
-                binding.rollNo.text=null
-                binding.place.text=null
-                binding.mobileNo.text=null
-                binding.RoomNo.text=null
-                binding.TimeOutTV.text="No time selected"
-                binding.dateTV.text="No date selected"
-                date=null
-                TimeOut=null
-                programme= "Select Programme"
-                branch="Select Department"
+                Toast.makeText(this, "Applied for gate pass", Toast.LENGTH_SHORT).show()
+                binding.name.text = null
+                binding.rollNo.text = null
+                binding.place.text = null
+                binding.mobileNo.text = null
+                binding.emailId.text=null
+                binding.RoomNo.text = null
+                binding.TimeOutTV.text = "No time selected"
+                binding.dateTV.text = "No date selected"
+                date = null
+                TimeOut = null
+                programme = "Select Programme"
+                branch = "Select Department"
                 binding.Branch.setSelection(0)
                 binding.Programme.setSelection(0)
-            }
-            .addOnFailureListener {
-                Toast.makeText(this,"Something Went Wrong",Toast.LENGTH_SHORT).show()
+
 
             }
+
+sendNotification(key)
+
+
+
+    }
+
+    private fun sendNotification(key: String) {
+
+        Firebase.firestore.collection("Admin").document("token")
+            .get().addOnSuccessListener {
+             val   data=it.toObject(AdminModel::class.java)
+
+
+                val notificationData= PushNotification(NotificationData("New Local Gate Pass",key),
+                    data!!.token
+                )
+
+                ApiUtilities.getInstance().sendNotification(
+                    notificationData
+                ).enqueue(object : Callback<PushNotification> {
+                    override fun onResponse(
+                        call: Call<PushNotification>,
+                        response: retrofit2.Response<PushNotification>
+                    ) {
+                        Toast.makeText(this@LocalGatePassActivity,data.token.toString()
+                            ,Toast.LENGTH_SHORT).show()
+                    }
+
+                    override fun onFailure(call: Call<PushNotification>, t: Throwable) {
+                        Toast.makeText(this@LocalGatePassActivity,"Something Went Wrong"
+                        ,Toast.LENGTH_SHORT).show()
+                    }
+
+                })
+            }
+
 
     }
 
@@ -235,7 +278,6 @@ name = binding.name.text.toString(),
         }
         return super.onOptionsItemSelected(item)
     }
-
 
 
 }

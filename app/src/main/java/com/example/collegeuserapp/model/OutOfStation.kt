@@ -14,6 +14,7 @@ data class OutOfStation(
     val status:String?="Pending",
     val date: String?="",
     val timeOut:String?="",
-    val timeIn:String?=""
+    val timeIn:String?="",
+    val emailId:String=""
 
 )

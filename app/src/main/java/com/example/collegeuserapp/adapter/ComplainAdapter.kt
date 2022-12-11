@@ -3,7 +3,6 @@ package com.example.collegeuserapp.adapter
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Context
-import android.graphics.Color.green
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -49,6 +48,7 @@ class ComplainAdapter(val context: Context, val list:ArrayList<Complain>)
                 .create()
             dialog.show()
             binding.name.text=list[position].name
+binding.email.text=list[position].emailId
             binding.MobileNo.text=list[position].rollNo
             binding.rollNo.text=list[position].rollNo
             binding.category.text=list[position].category

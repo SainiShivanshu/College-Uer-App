@@ -12,4 +12,5 @@ data class Complain(
     val category:String?="",
     val description:String?="",
     val status:String?="Pending",
+    val emailId:String?=""
 )

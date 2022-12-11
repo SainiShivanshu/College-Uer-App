@@ -31,7 +31,7 @@
                     android:text="Name"
                     android:layout_weight="1"
                     android:textSize="18sp"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/startColor2"
                     />
                 <TextView
                     android:layout_width="0dp"
@@ -43,6 +43,33 @@
                     android:id="@+id/name"/>
 
             </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:padding="1dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Email Id"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:textColor="@color/startColor2"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/email"/>
+
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -55,7 +82,7 @@
                     android:text="Roll No"
                     android:layout_weight="1"
                     android:textSize="18sp"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/startColor2"
                     />
                 <TextView
                     android:layout_width="0dp"
@@ -79,7 +106,7 @@
                     android:text="Programme"
                     android:layout_weight="1"
                     android:textSize="18sp"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/startColor2"
                     />
                 <TextView
                     android:layout_width="0dp"
@@ -103,7 +130,7 @@
                     android:text="Branch"
                     android:layout_weight="1"
                     android:textSize="18sp"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/startColor2"
                     />
                 <TextView
                     android:layout_width="0dp"
@@ -127,7 +154,7 @@
                     android:text="Mobile No"
                     android:layout_weight="1"
                     android:textSize="18sp"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/startColor2"
                     />
                 <TextView
                     android:layout_width="0dp"
@@ -153,7 +180,7 @@
                     android:text="Room No"
                     android:layout_weight="1"
                     android:textSize="18sp"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/startColor2"
                     />
                 <TextView
                     android:layout_width="0dp"
@@ -177,7 +204,7 @@
                     android:text="Place"
                     android:layout_weight="1"
                     android:textSize="18sp"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/startColor2"
                     />
 
                 <TextView
@@ -203,7 +230,7 @@
                     android:text="Date"
                     android:layout_weight="1"
                     android:textSize="18sp"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/startColor2"
                     />
                 <TextView
                     android:layout_width="0dp"
@@ -227,7 +254,7 @@
                     android:text="Time Out"
                     android:layout_weight="1"
                     android:textSize="18sp"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/startColor2"
                     />
                 <TextView
                     android:layout_width="0dp"
@@ -252,7 +279,7 @@
                     android:text="Time In"
                     android:layout_weight="1"
                     android:textSize="18sp"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/startColor2"
                     />
                 <TextView
                     android:layout_width="0dp"
@@ -277,7 +304,7 @@
                     android:text="Status"
                     android:layout_weight="1"
                     android:textSize="18sp"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/startColor2"
                     />
                 <TextView
                     android:layout_width="0dp"

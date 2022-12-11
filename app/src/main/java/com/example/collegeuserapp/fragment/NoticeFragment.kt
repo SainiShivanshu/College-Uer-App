@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import com.example.collegeuserapp.Adapter.NoticeListAdapter
+import com.example.collegeuserapp.adapter.NoticeListAdapter
 import com.example.collegeuserapp.model.AddNoticeModel
 import com.example.collegeuserapp.databinding.FragmentNoticeBinding
 import com.google.firebase.firestore.Query

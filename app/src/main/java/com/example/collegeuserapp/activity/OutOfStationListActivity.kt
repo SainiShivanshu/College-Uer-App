@@ -28,7 +28,7 @@ class OutOfStationListActivity : AppCompatActivity() {
         var list = ArrayList<OutOfStation>()
 
         Firebase.firestore.collection("Out Of Station Gate Pass")
-            .whereEqualTo("rollNo",preferences.getString("rollNo",""))
+            .whereEqualTo("emailId",preferences.getString("email",""))
             .orderBy("timestamp", Query.Direction.DESCENDING)
             .get()
             .addOnSuccessListener {

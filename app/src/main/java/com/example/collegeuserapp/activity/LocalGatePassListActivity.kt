@@ -27,7 +27,7 @@ supportActionBar?.title="Previous Gate Passes"
         var list = ArrayList<LocalGatePass>()
 
         Firebase.firestore.collection("Local Gate Pass")
-            .whereEqualTo("rollNo",preferences.getString("rollNo",""))
+            .whereEqualTo("emailId",preferences.getString("email",""))
             .orderBy("timestamp", Query.Direction.DESCENDING)
             .get()
             .addOnSuccessListener {

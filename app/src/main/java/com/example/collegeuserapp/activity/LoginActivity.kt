@@ -8,10 +8,12 @@ import android.widget.Toast
 import com.example.collegeuserapp.MainActivity
 import com.example.collegeuserapp.databinding.ActivityLoginBinding
 import com.example.collegeuserapp.model.UserModel
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding:ActivityLoginBinding
@@ -63,43 +65,67 @@ auth = FirebaseAuth.getInstance()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful)
                 {
-                    val preferences = this.getSharedPreferences("user", MODE_PRIVATE)
-                    val editor = preferences.edit()
-                    editor.putString("email", binding.emailId.text!!.toString())
-                    editor.apply()
 
-                    Firebase.firestore.collection("Users").document(email!!.toString()).get()
-                        .addOnSuccessListener {
 
-                            val doc = it.toObject<UserModel>()
-                            if (doc!!.name == "" || doc!!.branch == "" || doc!!.address == "" || doc!!.mobileNo == "" || doc!!.programme == "" || doc!!.imageUrl == "") {
-                                startActivity(
-                                    Intent(
-                                        this,
-                                        SetUpProfileActivity::class.java
-                                    ).putExtra("email", doc!!.emailId.toString())
-                                )
-                                finish()
-                            }
-                            else{
-                                val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-                                startActivity(intent)
-                                finish()
-                            }
+                    FirebaseMessaging.getInstance().token.addOnCompleteListener(
+                        OnCompleteListener {
+                            if(!it.isSuccessful)
+                                return@OnCompleteListener
+
+                            val map = hashMapOf<String,Any>()
+                            map["token"]=it.result
+
+                            Firebase.firestore.collection("Users")
+                                .document(email).update(map)
+
+                            val preferences = this.getSharedPreferences("user", MODE_PRIVATE)
+                            val editor = preferences.edit()
+                            editor.putString("email", binding.emailId.text!!.toString())
+                            editor.apply()
+
+                            Firebase.firestore.collection("Users").document(email!!.toString()).get()
+                                .addOnSuccessListener {
+
+
+                                    val doc = it.toObject<UserModel>()
+                                    if (doc!!.name == "" || doc!!.branch == "" || doc!!.address == "" || doc!!.mobileNo == "" || doc!!.programme == "" || doc!!.imageUrl == "") {
+                                        startActivity(
+                                            Intent(
+                                                this,
+                                                SetUpProfileActivity::class.java
+                                            ).putExtra("email", doc!!.emailId.toString())
+                                        )
+                                        finish()
+                                    }
+                                    else{
+
+                                        val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                                        startActivity(intent)
+                                        finish()
+                                    }
+
+                                }
+                                .addOnFailureListener {
+                                    dialog.dismiss()
+                                    Toast.makeText(this, it.message.toString(), Toast.LENGTH_SHORT)
+                                        .show()
+
+                                }
+
+
 
                         }
-                        .addOnFailureListener {
-                            Toast.makeText(this, it.message.toString(), Toast.LENGTH_SHORT)
-                                .show()
-                        }
 
+                    )
 
 
                 }
                 else
                 {
+                    dialog.dismiss()
                     Toast.makeText(this@LoginActivity, task.exception!!.message.toString(), Toast.LENGTH_LONG).show()
+                    startActivity(Intent(this@LoginActivity,SignUpActivity::class.java))
                 }
             }
 

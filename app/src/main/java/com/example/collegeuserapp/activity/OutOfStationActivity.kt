@@ -153,7 +153,8 @@ class OutOfStationActivity : AppCompatActivity() , DatePickerDialog.OnDateSetLis
             roomNo = binding.RoomNo.text.toString(),
             overNightStayInformation=binding.overnightStay.text.toString(),
             date = date,
-            timeOut = TimeOut
+            timeOut = TimeOut,
+            emailId = binding.emailId.text.toString()
         )
         Firebase.firestore.collection("Out Of Station Gate Pass")
             .document(key).set(data).addOnSuccessListener {
@@ -164,6 +165,7 @@ class OutOfStationActivity : AppCompatActivity() , DatePickerDialog.OnDateSetLis
                 binding.place.text=null
                 binding.mobileNo.text=null
                 binding.RoomNo.text=null
+                binding.emailId.text=null
                 binding.overnightStay.text=null
                 binding.TimeOutTV.text="No time selected"
                 binding.dateTV.text="No date selected"

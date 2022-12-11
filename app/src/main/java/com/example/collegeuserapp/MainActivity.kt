@@ -3,6 +3,7 @@ package com.example.collegeuserapp
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -194,7 +195,12 @@ setupDrawerAnimation()
                 binding.drawerLayout.close()
             }
             R.id.website -> {
-                Toast.makeText(this, "website", Toast.LENGTH_SHORT).show()
+                startActivity(
+                    Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("https://www.rgipt.ac.in/")
+                    )
+                )
             }
             R.id.about -> {
                 Toast.makeText(this, "about", Toast.LENGTH_SHORT).show()

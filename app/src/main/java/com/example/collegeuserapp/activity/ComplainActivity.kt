@@ -144,8 +144,8 @@ class ComplainActivity : AppCompatActivity() {
             timestamp= FieldValue.serverTimestamp(),
             roomNo = binding.RoomNo.text.toString(),
             category = type,
-            description = binding.description.text.toString()
-
+            description = binding.description.text.toString(),
+emailId=binding.emailId.text.toString()
         )
         Firebase.firestore.collection("Complain")
             .document(key).set(data).addOnSuccessListener {
@@ -154,6 +154,7 @@ class ComplainActivity : AppCompatActivity() {
                 binding.name.text=null
                 binding.rollNo.text=null
                 binding.description.text=null
+                binding.emailId.text=null
                 binding.mobileNo.text=null
                 binding.RoomNo.text=null
            type="Select Category"

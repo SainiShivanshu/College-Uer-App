@@ -15,9 +15,12 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.collegeuserapp.MainActivity
 import com.example.collegeuserapp.databinding.ActivitySetUpProfileBinding
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
 
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.storage.FirebaseStorage
 import java.util.*
 import kotlin.collections.ArrayList
@@ -156,24 +159,39 @@ class SetUpProfileActivity : AppCompatActivity() {
     private fun storeData(image: String) {
 
 
-        val map = hashMapOf<String,Any>()
-        map["name"]=binding.userName.text.toString()
-        map["mobileNo"]=binding.userNumber.text.toString()
-        map["imageUrl"]=image
-        map["address"]=binding.address.text.toString()
-        map["programme"]=programme
-        map["branch"]=branch
-        map["rollNo"]=binding.rollNo.text.toString()
 
-        Firebase.firestore.collection("Users")
-            .document(binding.emailId.text.toString())
-            .update(map).addOnSuccessListener {
-                Toast.makeText(this,"Profile Updated!!",Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this,MainActivity::class.java))
-                finish()
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(
+            OnCompleteListener {
+                if(!it.isSuccessful)
+                    return@OnCompleteListener
+
+
+                val map = hashMapOf<String,Any>()
+                map["name"]=binding.userName.text.toString()
+                map["mobileNo"]=binding.userNumber.text.toString()
+                map["imageUrl"]=image
+                map["address"]=binding.address.text.toString()
+                map["programme"]=programme
+                map["branch"]=branch
+                map["rollNo"]=binding.rollNo.text.toString()
+                map["token"]=it.result
+                Firebase.firestore.collection("Users")
+                    .document(binding.emailId.text.toString())
+                    .update(map).addOnSuccessListener {
+                        Toast.makeText(this,"Profile Updated!!",Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this,MainActivity::class.java))
+                        finish()
+                    }
+                    .addOnFailureListener {
+                        Toast.makeText(this,"Something Went Wrong",Toast.LENGTH_SHORT).show()
+                    }
+
             }
-            .addOnFailureListener {
-                Toast.makeText(this,"Something Went Wrong",Toast.LENGTH_SHORT).show()
-            }
+
+        )
+
+
     }
 }
+
+
